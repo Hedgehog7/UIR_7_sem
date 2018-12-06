@@ -1,0 +1,41 @@
+﻿class LightRaceType {
+	get Name() : string
+	get Namespace() : string
+	 
+	public string Name
+    {
+		return this.nameEntity;
+    }
+		
+	public IList<RaceType> Parents
+    {
+        for(let i of this.parents) {
+            parentsList.push(i)
+        }
+		return parentsList;
+    }
+	
+	public IList<RaceType> GetAttributes
+	{
+		for(let i of this.getAtributesNames()) {
+            attributeInfo.push(i)              
+            nameType = this.getNameType(i)
+            attributeInfo.push(nameType)       
+            if(Object.getOwnPropertyDescriptor(this, i).writable == true) 
+			{
+                attributeInfo.push("writable")
+            }
+            else 
+			{
+                attributeInfo.push("readable")
+            }
+		}
+	}
+	
+	public IList<RaceType> GetAssoсiations
+	{
+		return this.associations;
+	}
+}
+
+Расписать ассоциации: коллекция в которой 3 коллекции (1 к 1, 1 ко многим, многие ко многим)
